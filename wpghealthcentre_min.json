@@ -1,0 +1,51 @@
+{
+  "sourcecol": "name,address,phone,website,email,lat,lng",
+  "data": [
+    {
+      "name": "St.Amant",
+      "address": "440 River Road",
+      "phone": "204-256-4301",
+      "website": "http://stamant.ca/",
+      "email": "inquiries@stamant.ca",
+      "lat": "49.815826",
+      "lng": "-97.134039"
+    },
+    {
+      "name": "Riverview Health Centre",
+      "address": "One Morley Avenue",
+      "phone": "204-478-6203",
+      "website": "http://www.rhc.mb.ca/",
+      "email": "rhcinfo@rhc.mb.ca",
+      "lat": "49.868907",
+      "lng": "-97.120004"
+    },
+    {
+      "name": "Deer Lodge Centre",
+      "address": "2109 Portage Avenue",
+      "phone": "204-837-1301",
+      "website": "http://www.deerlodge.mb.ca/",
+      "email": "Info@deerlodge.mb.ca",
+      "lat": "49.877554",
+      "lng": "-97.235603"
+    },
+    {
+      "name": "Adult Mental Health Crisis Response Centre",
+      "address": "817 Bannatyne Avenue",
+      "phone": "204-940-1781",
+      "website": "http://www.wrha.mb.ca/facilities/crisis-response-centre.php",
+      "email": "N/A",
+      "lat": "49.905579",
+      "lng": "-97.162647"
+    },
+    {
+      "name": "Misericordia Health Centre",
+      "address": "99 Cornish Avenue",
+      "phone": "204-774-6581",
+      "website": "http://www.misericordia.mb.ca/",
+      "email": "info@misericordia.mb.ca",
+      "lat": "49.879178",
+      "lng": "-97.159327"
+    }
+  ],
+  "lastupdate": "2015-Dec-29"
+}

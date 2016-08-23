@@ -1,0 +1,828 @@
+{
+	"featuremetadata":{
+		"hashtoken":"4fo+C+lb?s@ARZQz^a?2i3U*TY2.<:b>hd9K7krk9ezv.1(z2g[6u%C1vb&:m)F11HhY<nrHZE8w(Otep7])bc6eF}hdV>vO"
+	},
+	"featuregroups":[
+		{
+			"groupname":"BaseMap",
+			"features":[
+				{
+					"featureid":1,
+					"loaderid":[
+						0,
+						0
+					],
+					"featurename":"Google Terrain maps",
+					"descr":"Terrain maps.",
+					"source":"google",
+					"sourcetype":"wms",
+					"srcgeolocation":"internal google command",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"tile",
+					"featurescale":"",
+					"markericon":"local://terrain"
+				},
+				{
+					"featureid":2,
+					"loaderid":[
+						1,
+						0
+					],
+					"featurename":"Google Satellite maps",
+					"descr":"Satellite maps with no labels.",
+					"source":"google",
+					"sourcetype":"wms",
+					"srcgeolocation":"internal google command",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"tile",
+					"featurescale":"",
+					"markericon":"local://satellite"
+				},
+				{
+					"featureid":3,
+					"loaderid":[
+						2,
+						0
+					],
+					"featurename":"Google Hybrid maps",
+					"descr":"Satellite maps with a transparent layer of major streets. ",
+					"source":"google",
+					"sourcetype":"wms",
+					"srcgeolocation":"internal google command",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"tile",
+					"featurescale":"",
+					"markericon":"local://hybrid"
+				}
+			]
+			
+		},
+		{
+			"groupname":"Boundary",
+			"features":[
+				{
+					"featureid":"jx93-sett",
+					"loaderid":[
+						509,
+						510
+					],
+					"featurename":"City Limit",
+					"descr":"City Limit Boundary. Viewable at all zoom levels",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"srcdatalocation":"",
+					"expiredate":"31_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"displaystyle":{
+						"strokeColor":"#FF0000",
+						"fillColor":"#14FF0000",
+						"strokeWidth":"10"
+					},
+					"geotype":"polygon",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"",
+					"displaycol":"name:Name",
+					"geozindex":"1",
+					"markericon":"local://polygon",
+					"loadrefreshnum":"10000"
+				},
+				{
+					"featureid":"ede3-teb8",
+					"loaderid":[
+						511,
+						512
+					],
+					"featurename":"Electoral Ward",
+					"descr":"Electoral Ward boundary. Viewable at all zoom levels",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"srcdatalocation":"",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"",
+					"displaycol":"name:Name,councillor:Councillor,phone:PhoneNum,asst:Assistant,asstphone:Assistant PhoneNum,clerk:Clerk,clerkphone:Clerk PhoneNum,website:Website",
+					"geozindex":"2",
+					"markericon":"local://polygon",
+					"loadrefreshnum":"3"
+				},
+				{
+					"featureid":"jhqm-mmeu",
+					"loaderid":[
+						513,
+						514
+					],
+					"featurename":"School Division",
+					"descr":"School Division Boundary. Viewable at all zoom levels",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"srcdatalocation":"",
+					"expiredate":"32_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"",
+					"displaycol":"division:Division,name:Name,website:Website",
+					"geozindex":"3",
+					"markericon":"local://polygon",
+					"loadrefreshnum":"3"
+				},
+				{
+					"featureid":"fen6-iygi",
+					"loaderid":[
+						515,
+						516
+					],
+					"featurename":"Neighbourhood",
+					"descr":"Neighbourhood Boundary. Viewable at all zoom levels (Slow)",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"srcdatalocation":"",
+					"expiredate":"33_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"",
+					"displaycol":"name:Name",
+					"geozindex":"4",
+					"markericon":"local://polygon",
+					"loadrefreshnum":"5"
+					
+				},
+				{
+					"featureid":"tm8b-h7pb",
+					"loaderid":[
+						525,
+						0
+					],
+					"featurename":"Plow Zone",
+					"descr":"Plow Zone Boundary. Viewable at all zoom levels",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"srcdatalocation":"",
+					"expiredate":"33_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"",
+					"displaycol":"city_area:City Area,plow_zone:Plow Zone",
+					"geozindex":"4",
+					"markericon":"local://polygon",
+					"loadrefreshnum":"5"
+					
+				}
+				
+			]
+			
+		},
+		{"groupname":"Health",
+			"features":[
+				{
+					"featureid":"wpgwalkin",
+					"loaderid":[
+						4,
+						0
+					],
+					"featurename":"Clinic",
+					"descr":"Clinic",
+					"source":"google",
+					"sourcetype":"json",
+					"srcgeolocation":"google",
+					"expiredate":"1_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"name,vicinity,url",
+					"displaycol":"name:Name,vicinity:Vicinity,url:Google URL",
+					"markericon":"local://walkingclinic",
+					"loadrefreshnum":"10"
+				},
+				{
+					"featureid":"wpghospitals",
+					"loaderid":[
+						1004,
+						0
+					],
+					"featurename":"Hospitals",
+					"descr":"Hospital location",
+					"source":"external",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"expiredate":"60_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"",
+					"displaycol":"name:Name,address:Address,phone:Phone,website:Website,email:Email,em_wait_time:Wait Time URL",
+					"markericon":"local://hospital",
+					"loadrefreshnum":"10"
+				},
+				{
+					"featureid":"wpghealthcentre",
+					"loaderid":[
+						1005,
+						0
+					],
+					"featurename":"Health Centre",
+					"descr":"Health centre location",
+					"source":"external",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"expiredate":"60_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"",
+					"displaycol":"name:Name,address:Address,phone:PhoneNum,website:Website,email:Email",
+					"markericon":"local://healthcentre",
+					"loadrefreshnum":"10"
+				},
+				{
+					"featureid":"wpgcarehome",
+					"loaderid":[
+						1006,
+						0
+					],
+					"featurename":"Personal care home",
+					"descr":"Personal care location",
+					"source":"external",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"expiredate":"60_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"name,address,phone,website,email",
+					"displaycol":"name:Name,address:Address,phone:PhoneNum,website:Website,email:Email",
+					"markericon":"local://personalcarehome",
+					"loadrefreshnum":"10"
+				}
+				]
+			},
+		{
+			"groupname":"Recreation",
+			"features":[
+				{
+					"featureid":"t3cz-kh3n",
+					"loaderid":[
+						517,
+						0
+					],
+					"featurename":"Arena",
+					"descr":"Location of arenas.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"",
+					"displaycol":"name:Name,address:Address,ice_surface_count:Surface count,website:Website",
+					"markericon":"local://arena",
+					"loadrefreshnum":"20"
+				},
+				{
+					"featureid":"m6ra-xm9i",
+					"loaderid":[
+						518,
+						0
+					],
+					"featurename":"Community center",
+					"descr":"Location of community centers.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"",
+					"displaycol":"name:Name,address:Address,website:Website,email:Email",
+					"markericon":"local://communitycenter",
+					"loadrefreshnum":"20"
+				},
+				{
+					"featureid":"bfx6-4qpd",
+					"loaderid":[
+						519,
+						0
+					],
+					"featurename":"Fitness leisure center",
+					"descr":"Location of fitness centers.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"",
+					"displaycol":"name:Name,address:Address,website:Website",
+					"markericon":"local://fitness",
+					"loadrefreshnum":"20"
+				},
+				{
+					"featureid":"itub-a6x4",
+					"loaderid":[
+						520,
+						0
+					],
+					"featurename":"Library",
+					"descr":"Location of libraries.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"sourcecol":"",
+					"displaycol":"name:Name,address:Address,wifi:WIFI,accessibility:Accessibilty,room_rentals:Room rentals,room_rental_info:Rental info,parking_lot:Parking lot,parkng_stalls:Stalls,notes:Notes,website:Website",
+					"markericon":"local://library",
+					"loadrefreshnum":"20"
+				},
+				{
+					"featureid":"pnd5-29qy",
+					"loaderid":[
+						521,
+						0
+					],
+					"featurename":"Indoor pool",
+					"descr":"Location of indoor swimming pools.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"sourcecol":"",
+					"displaycol":"name:Name,address:Address,entry_height_requirement:Height Req,pool_entry:Pool Entry,average_water_temp:Avg Water TEMP,average_air_temp:Avg Air TEMP,group_bookings_info:Group Booking,lockers_info:Locker Info,diving_board_info:Diving Board,lap_swim_info:Lap Swim Info,website:Website",
+					"markericon":"local://indoorpool",
+					"loadrefreshnum":"20"
+				},
+				{
+					"featureid":"m7h5-by7s",
+					"loaderid":[
+						522,
+						0
+					],
+					"featurename":"Outdoor pool",
+					"descr":"Location of outdoor swimming pools.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"sourcecol":"",
+					"displaycol":"name:Name,address:Address,entry_height_requirement:Height Req,pool_entry:Pool Entry,average_water_temp:Avg Water TEMP,group_booking_info:Group Booking,diving_board_info:Diving Board,facility_info:Facility Info,website:Website",
+					"markericon":"local://outdoorpool",
+					"loadrefreshnum":"20"
+				},
+				{
+					"featureid":"ky6k-a232",
+					"loaderid":[
+						523,
+						0
+					],
+					"featurename":"Spraypad",
+					"descr":"Location of spraypads.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"sourcecol":"",
+					"displaycol":"name:Name,address:Address,website:Website",
+					"markericon":"local://spraypad",
+					"loadrefreshnum":"20"
+				},
+				{
+					"featureid":"fe7p-u4s6",
+					"loaderid":[
+						524,
+						0
+					],
+					"featurename":"Wading pool",
+					"descr":"Location of wading pools.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"sourcecol":"",
+					"displaycol":"name:Name,address:Address,website:Website",
+					"markericon":"local://wadingpool",
+					"loadrefreshnum":"20"
+				}
+				
+			]
+			
+		},
+		{
+			"groupname":"Transportation",
+			"features":[
+				{
+					"featureid":4,
+					"loaderid":[
+						3,
+						0
+					],
+					"featurename":"Traffic",
+					"descr":"Traffic",
+					"source":"google",
+					"sourcetype":"wfs",
+					"srcgeolocation":"google",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polyline",
+					"featurescale":"",
+					"markericon":"local://traffic"
+				},
+				{
+					"featureid":"transit1",
+					"loaderid":[
+						1003,
+						0
+					],
+					"featurename":"Winnipeg transit",
+					"descr":"Winnipeg transit bus stops",
+					"source":"transit",
+					"sourcetype":"wfs",
+					"srcgeolocation":"transiturl",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"15",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"transitinfo",
+					"markericon":"local://transit"
+				}
+				
+			]
+			
+		},
+		{
+		"groupname":"Social Media",
+			"features":[
+				
+				{
+					"featureid":"instagram",
+					"loaderid":[
+						1007,
+						0
+					],
+					"featurename":"Instagram",
+					"descr":"Load public instagram. Data refresh every 15 mins. location approximate",
+					"source":"instagram",
+					"sourcetype":"json",
+					"expiredate":"15_MINS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"action":"instagraminfo",
+					"markericon":"local://instagram",
+					"sourcecol":"id,image_thumb,created_time,image_normal,link,image_low,user,caption",
+					"displaycol":"*",
+					"loadrefreshnum":"10"
+				},
+				{
+					"featureid":"twitter",
+					"loaderid":[
+						1008,
+						0
+					],
+					"featurename":"Twitter",
+					"descr":"Load current public tweets. Data refresh every 15 mins. location approximate",
+					"source":"twitter",
+					"sourcetype":"json",
+					"expiredate":"15_MINS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"action":"twitterinfo",
+					"markericon":"local://twitter",
+					"sourcecol":"id,text,created_at,screen_name,in_reply_to",
+					"displaycol":"*",
+					"loadrefreshnum":"10"
+				}
+				
+			]
+			
+		},
+		{
+			"groupname":"Extra",
+			"features":[
+			
+			]
+			
+		}
+		,
+		{
+			"groupname":"Enter the Matrix",
+			"features":[
+			{
+					"featureid":"matrix-1",
+					"loaderid":[
+						-1,
+						0
+					],
+					"featurename":"Lane closures NA",
+					"descr":"Lane closures NA",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polyline",
+					"featurescale":""
+				},
+				{
+					"featureid":"777825",
+					"loaderid":[
+						777825,
+						0
+					],
+					"featurename":"City of Winnipeg Street",
+					"descr":"City of Winnipeg Street",
+					"source":"sdi",
+					"sourcetype":"wms",
+					"srcgeolocation":"gettile",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"tile",
+					"featurescale":""
+				},
+				{
+					"featureid":"13875",
+					"loaderid":[
+						13875,
+						0
+					],
+					"featurename":"Assessment value SDI WMS",
+					"descr":"Assessment value SDI WMS",
+					"source":"sdi",
+					"sourcetype":"wms",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"png",
+					"featurescale":""
+				},
+				{
+					"featureid":"13937",
+					"loaderid":[
+						13937,
+						0
+					],
+					"featurename":"Assessment parcel SDI WFS",
+					"descr":"Assessment parcel SDI WFS",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"17",
+					"geotype":"polygon",
+					"featurescale":"2853",
+					"action":"http://winnipeg.ca/cms/Now/chksecrollnum/ChkSecRollNum.asp?isRealtySearch=true&pglang=EN&",
+					"displaycol":"ASSESSMENT_PIN:RollNumber"
+				},
+				{
+					"featureid":"matrix-2",
+					"loaderid":[
+						0,
+						0
+					],
+					"featurename":"Building",
+					"descr":"Building",
+					"sourcetype":"npg",
+					"srcgeolocation":"google"
+				},
+				{
+					"featureid":"matrix-5",
+					"loaderid":[
+						0,
+						0
+					],
+					"featurename":"Indoor",
+					"descr":"Indoor",
+					"sourcetype":"png",
+					"srcgeolocation":"winnipeg.ca/gettiles"
+				},
+				{
+					"featureid":"12031",
+					"loaderid":[
+						12031,
+						0
+					],
+					"featurename":"City Limit",
+					"descr":"Status=offline source=sdi type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":""
+				},
+				{
+					"featureid":"12092",
+					"loaderid":[
+						12092,
+						0
+					],
+					"featurename":"Electoral ward",
+					"descr":"Status=ok source=sdi type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":""
+				},
+				{
+					"featureid":"13377",
+					"loaderid":[
+						13377,
+						0
+					],
+					"featurename":"School division",
+					"descr":"Status=ok source=sdi type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":""
+				},
+				{
+					"featureid":"12096",
+					"loaderid":[
+						12096,
+						0
+					],
+					"featurename":"Neighbourhood",
+					"descr":"Status=offline source=sid type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"googledrive",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"",
+					"featurescale":"polygon"
+				},{
+					"featureid":"13386",
+					"loaderid":[
+						13386,
+						0
+					],
+					"featurename":"School private",
+					"descr":"Status=ok source=sdi type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"displaycol":"NAME:Name,ADDRESS:Address,POSTAL_CODE:Postal Code,PHONE_NUMBER:PhoneNum,EMAIL_ADDRESS:Email",
+					"markericon":"http://google-maps-icons.googlecode.com/files/university.png"
+				},
+				{
+					"featureid":"13387",
+					"loaderid":[
+						13387,
+						0
+					],
+					"featurename":"School public",
+					"descr":"Status=ok source=sdi type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"displaycol":"NAME:Name,POSTAL_CODE:Postal code,PHONE_NUMBER:PhoneNum",
+					"markericon":"https://google-maps-icons.googlecode.com/files/school.png"
+				},
+				{
+					"featureid":"matrix-3",
+					"loaderid":[
+						1001,
+						0
+					],
+					"featurename":"WPG Parking Athority",
+					"descr":"Parkages operated by WPA. Status=offline",
+					"source":"external",
+					"sourcetype":"wfs",
+					"srcgeolocation":"googledrive",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":""
+				},
+				{
+					"featureid":"matrix-4",
+					"loaderid":[
+						1002,
+						0
+					],
+					"featurename":"Impark",
+					"descr":"Parking Lots operated by Impark. Status=offline",
+					"source":"impark",
+					"sourcetype":"wfs",
+					"srcgeolocation":"imparkurl",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":""
+				},
+				{
+					"featureid":"99",
+					"loaderid":[
+						0,
+						0
+					],
+					"featurename":"facebook",
+					"descr":"facebook",
+					"sourcetype":"na",
+					"srcgeolocation":"na"
+				}
+				
+			]
+			
+		}
+		
+	]
+}

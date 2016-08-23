@@ -1,0 +1,66 @@
+{
+  "sourcecol": "name,address,phone,website,email,em_wait_time,lat,lng",
+  "data": [
+    {
+      "name": "Victoria General Hospital",
+      "address": "2340 Pembina Highway",
+      "phone": "204-269-3570",
+      "website": "http://www.vgh.mb.ca/",
+      "email": "info@vgh.mb.ca",
+      "em_wait_time": "http://wrha.mb.ca/wait-times/index.php",
+      "lat": "49.806705",
+      "lng": "-97.152684"
+    },
+    {
+      "name": "Seven Oaks General Hospital",
+      "address": "2300 McPhillips Street",
+      "phone": "204-632-7133",
+      "website": "http://sogh.ca/",
+      "email": "SOGH_Foundation@sogh.mb.ca",
+      "em_wait_time": "http://wrha.mb.ca/wait-times/index.php",
+      "lat": "49.955230",
+      "lng": "-97.148787"
+    },
+    {
+      "name": "Grace Hospital",
+      "address": "300 Booth Drive",
+      "phone": "204-837-0111",
+      "website": "http://www.gracehospital.ca/",
+      "email": "foundation@ggh.mb.ca",
+      "em_wait_time": "http://wrha.mb.ca/wait-times/index.php",
+      "lat": "49.882355",
+      "lng": "-97.276778"
+    },
+    {
+      "name": "Concordia Hospital",
+      "address": "1095 Concordia Ave",
+      "phone": "204-667-1560",
+      "website": "http://www.concordiahospital.mb.ca/",
+      "email": "N/A (called but no general inquiry email)",
+      "em_wait_time": "http://wrha.mb.ca/wait-times/index.php",
+      "lat": "49.913212",
+      "lng": "-97.064678"
+    },
+    {
+      "name": "St. Boniface Hospital",
+      "address": "409 Tache Ave",
+      "phone": "204-233-8563",
+      "website": "http://www.sbgh.mb.ca/",
+      "email": "sbghweb@sbgh.mb.ca",
+      "em_wait_time": "http://wrha.mb.ca/wait-times/index.php",
+      "lat": "49.884131",
+      "lng": "-97.124860"
+    },
+    {
+      "name": "Health Sciences Center",
+      "address": "820 Sherbrook St.",
+      "phone": "204-787-3661",
+      "website": "http://www.hsc.mb.ca/",
+      "email": "info@hsc.mb.ca",
+      "em_wait_time": "http://wrha.mb.ca/wait-times/index.php",
+      "lat": "49.902562",
+      "lng": "-97.157145"
+    }
+  ],
+  "lastupdate": "2015-Dec-29"
+}
