@@ -1,0 +1,5 @@
+{
+  "notificationid": "8",
+  "notificationtitle":"Application will be flaky in coming weeks.",
+  "notificationcontent":"Reason: Switching SP to host web content."
+}

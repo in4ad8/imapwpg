@@ -1,0 +1,348 @@
+{
+  "sourcecol": "name,address,phone,website,email,lat,lng",
+  "data": [
+    {
+      "name": "The Convalescent Home of Winnipeg",
+      "address": "276 Hugo Street North",
+      "phone": "204-453-4663",
+      "website": "http://tchw.com/index11.htm",
+      "email": "N/A",
+      "lat": "49.870537",
+      "lng": "-97.150222"
+    },
+    {
+      "name": "Riverview Health Centre",
+      "address": "1 Morley Avenue",
+      "phone": "204-478-6203",
+      "website": "http://www.riverviewhealthcentre.com/",
+      "email": "rhcinfo@rhc.mb.ca",
+      "lat": "49.868894",
+      "lng": "-97.120035"
+    },
+    {
+      "name": "Pembina Place Mennonite Personal Care Home",
+      "address": "285 Pembina Highway",
+      "phone": "204-284-0802",
+      "website": "http://www.bethania.ca/",
+      "email": "General.Inquiries@bethania.ca",
+      "lat": "49.872405",
+      "lng": "-97.144181"
+    },
+    {
+      "name": "Poseidon Care Centre",
+      "address": "70 Poseidon Bay",
+      "phone": "204-452-6204",
+      "website": "http://www.reveraliving.com/long-term-care/locations/poseidon",
+      "email": "N/A",
+      "lat": "49.853574",
+      "lng": "-97.174073"
+    },
+    {
+      "name": "Misericordia Health Centre",
+      "address": "99 Cornish Avenue",
+      "phone": "204-774-6581",
+      "website": "http://www.misericordia.mb.ca/index.html",
+      "email": "info@misericordia.mb.ca",
+      "lat": "49.879172",
+      "lng": "-97.159325"
+    },
+    {
+      "name": "Misericordia Place",
+      "address": "44 Furby Street",
+      "phone": "204-774-6581",
+      "website": "http://www.misericordia.mb.ca/Programs/LTCare.html",
+      "email": "info@misericordia.mb.ca",
+      "lat": "49.879827",
+      "lng": "-97.158636"
+    },
+    {
+      "name": "Lions Personal Care Centre",
+      "address": "320 Sherbrook Street",
+      "phone": "204-784-1240",
+      "website": "N/A",
+      "email": "lionsadmin@lhc.ca",
+      "lat": "49.888910",
+      "lng": "-97.159566"
+    },
+    {
+      "name": "Parkview Place",
+      "address": "440 Edmonton Street",
+      "phone": "204-942-5291",
+      "website": "http://www.reveraliving.com/long-term-care/locations/parkview-place",
+      "email": "N/A",
+      "lat": "49.897014",
+      "lng": "-97.150046"
+    },
+    {
+      "name": "Calvary Place Personal Care Home",
+      "address": "1325 Erin Street",
+      "phone": "204-943-4424",
+      "website": "http://calvaryplacepch.ca/",
+      "email": "dsimoes@calvaryplace.mb.ca",
+      "lat": "49.897471",
+      "lng": "-97.184097"
+    },
+    {
+      "name": "Beacon Hill Lodge",
+      "address": "190 Fort Street",
+      "phone": "204-942-7541",
+      "website": "http://www.reveraliving.com/long-term-care/locations/beacon-hill-lodge",
+      "email": "N/A",
+      "lat": "49.891008",
+      "lng": "-97.138159"
+    },
+    {
+      "name": "Fred Douglas Lodge",
+      "address": "1275 Burrows Avenue",
+      "phone": "204-586-8541",
+      "website": "http://www.freddouglassociety.com/",
+      "email": "admin@fdl.mb.ca",
+      "lat": "49.929403",
+      "lng": "-97.175892"
+    },
+    {
+      "name": "St. Joseph's Residence",
+      "address": "1149 Leila Avenue",
+      "phone": "204-697-8031",
+      "website": "http://sjri.ca/",
+      "email": "admin@sjri.ca",
+      "lat": "49.956377",
+      "lng": "-97.154418"
+    },
+    {
+      "name": "Middlechurch Home of Winnipeg",
+      "address": "280 Balderstone Road",
+      "phone": "204-339-1947",
+      "website": "http://www.middlechurchhome.mb.ca/index.htm",
+      "email": "bev@middlechurchhome.mb.ca",
+      "lat": "49.979563",
+      "lng": "-97.063900"
+    },
+    {
+      "name": "Maples Care Centre by Revera",
+      "address": "500 Mandalay Drive",
+      "phone": "204-632-8570",
+      "website": "http://www.ltcam.mb.ca/member_maples.html",
+      "email": "Maples@reveraliving.com",
+      "lat": "49.960010",
+      "lng": "-97.183409"
+    },
+    {
+      "name": "Luther Home",
+      "address": "1081 Andrews Street",
+      "phone": "204-338-4641 ",
+      "website": "http://lutherhome.com/main.htm",
+      "email": "N/A",
+      "lat": "49.944945",
+      "lng": "-97.122985"
+    },
+    {
+      "name": "River East Personal Care Home",
+      "address": "1375 Molson Street",
+      "phone": "204-668-7460",
+      "website": "http://www.rivereast.ca/",
+      "email": "dsaunders@extendicare.com",
+      "lat": "49.920544",
+      "lng": "-97.055223"
+    },
+    {
+      "name": "Kildonan Personal Care Centre",
+      "address": "1970 Henderson Highway",
+      "phone": "204-334-4633 ",
+      "website": "http://www.ltcam.mb.ca/member_kildonancare.html",
+      "email": "kildonan@reveraliving.com",
+      "lat": "49.957237",
+      "lng": "-97.072728"
+    },
+    {
+      "name": "Donwood Manor",
+      "address": "171 Donwood Drive",
+      "phone": "204-668-4410",
+      "website": "http://www.donwoodmanor.org/",
+      "email": "info@donwoodmanor.org",
+      "lat": "49.945657",
+      "lng": "-97.078250"
+    },
+    {
+      "name": "Concordia Place",
+      "address": "1000 Molson Avenue",
+      "phone": "204-661-7372 ",
+      "website": "http://www.concordiahospital.mb.ca/cp.html",
+      "email": "N/A",
+      "lat": "49.912692",
+      "lng": "-97.062972"
+    },
+    {
+      "name": "Bethania Mennonite Personal Care Home",
+      "address": "1045 Concordia Avenue",
+      "phone": "204-667-0795 ",
+      "website": "http://www.bethania.ca/",
+      "email": "General.Inquiries@bethania.ca",
+      "lat": "49.913902",
+      "lng": "-97.068539"
+    },
+    {
+      "name": "Park Manor Personal Care Home",
+      "address": "301 Redonda Street",
+      "phone": "204-222-3251",
+      "website": "http://wrha.mb.ca/ltc/pch/pch-park-manor.php",
+      "email": "N/A",
+      "lat": "49.900213",
+      "lng": "-96.980644"
+    },
+    {
+      "name": "Actionmarguerite (Saint-Boniface)",
+      "address": "185 Despins Street",
+      "phone": "204-233-3692",
+      "website": "http://www.actionmarguerite.ca/en/homepage/",
+      "email": "info@actionmarguerite.ca",
+      "lat": "49.887298",
+      "lng": "-97.120664"
+    },
+    {
+      "name": "Extendicare/Vista Park Lodge",
+      "address": "144 Nova Vista Drive",
+      "phone": "204-257-6688 ",
+      "website": "http://wrha.mb.ca/ltc/pch/pch-vista-park-lodge.php",
+      "email": "N/A",
+      "lat": "49.820003",
+      "lng": "-97.106903"
+    },
+    {
+      "name": "River Park Gardens",
+      "address": "735 St. Annes Road",
+      "phone": "204-255-9073",
+      "website": "http://wrha.mb.ca/ltc/pch/pch-river-park-gardens.php",
+      "email": "N/A",
+      "lat": "49.822905",
+      "lng": "-97.081953"
+    },
+    {
+      "name": "Meadowood Manor",
+      "address": "577 St. Anne's Road",
+      "phone": "204-257-2394",
+      "website": "http://www.meadowood.ca/",
+      "email": "info@meadowood.ca",
+      "lat": "49.834675",
+      "lng": "-97.090165"
+    },
+    {
+      "name": "Golden Links Lodge",
+      "address": "2280 St. Mary's Road",
+      "phone": "204-257-9947",
+      "website": "http://wrha.mb.ca/ltc/pch/pch-golden-links.php",
+      "email": "N/A",
+      "lat": "49.801686",
+      "lng": "-97.116592"
+    },
+    {
+      "name": "Actionmarguerite (Saint-Vital)",
+      "address": "450 River Road",
+      "phone": "204-254-3332",
+      "website": "http://www.actionmarguerite.ca/en/homepage/",
+      "email": "info@actionmarguerite.ca",
+      "lat": "49.816218",
+      "lng": "-97.131008"
+    },
+    {
+      "name": "The Sharon Home Inc. - The Saul & Claribel Simkin Centre",
+      "address": "1 Falconridge Drive",
+      "phone": "204-586-9781",
+      "website": "http://wrha.mb.ca/ltc/pch/pch-sharon-home.php",
+      "email": "N/A",
+      "lat": "49.822881",
+      "lng": "-97.192376"
+    },
+    {
+      "name": "Southeast Personal Care Home",
+      "address": "1265 Lee Boulevard",
+      "phone": "204-269-7111",
+      "website": "http://wrha.mb.ca/ltc/pch/pch-south-east.php",
+      "email": "N/A",
+      "lat": "49.798095",
+      "lng": "-97.168469"
+    },
+    {
+      "name": "St. Norbert Personal Care Home",
+      "address": "50 St. Pierre Street",
+      "phone": "204-269-4538",
+      "website": "http://wrha.mb.ca/ltc/pch/pch-st-norbert.php",
+      "email": "N/A",
+      "lat": "49.765826",
+      "lng": "-97.143912"
+    },
+    {
+      "name": "Golden Door Geriatric Centre",
+      "address": "1679 Pembina Highway",
+      "phone": "204-269-6308",
+      "website": "http://www.goldendoor.ca/",
+      "email": "info@goldendoor.ca",
+      "lat": "49.828583",
+      "lng": "-97.152976"
+    },
+    {
+      "name": "West Park Manor Personal Care Home",
+      "address": "3199 Grant Avenue",
+      "phone": "204-889-3330",
+      "website": "http://wrha.mb.ca/ltc/pch/pch-west-park-manor.php",
+      "email": "N/A",
+      "lat": "49.859373",
+      "lng": "-97.252865"
+    },
+    {
+      "name": "Extendicare/Tuxedo Villa",
+      "address": "2060 Corydon Avenue",
+      "phone": "204-889-2650",
+      "website": "http://www.extendicarecanada.com/winnipegtuxedovilla/",
+      "email": "cnh_tuxedovilla@extendicare.com",
+      "lat": "49.865797",
+      "lng": "-97.213691"
+    },
+    {
+      "name": "Charleswood Care Centre",
+      "address": "5501 Roblin Boulevard",
+      "phone": "204-888-3363",
+      "website": "http://wrha.mb.ca/ltc/pch/pch-charleswood-care-centre.php",
+      "email": "N/A",
+      "lat": "49.860228",
+      "lng": "-97.293421"
+    },
+    {
+      "name": "Extendicare/Oakview Place",
+      "address": "2395 Ness Avenue",
+      "phone": "204-888-3005",
+      "website": "http://www.extendicarecanada.com/winnipegoakviewplace/",
+      "email": "cnh_oakviewplace@extendicare.com ",
+      "lat": "49.886353",
+      "lng": "-97.265245"
+    },
+    {
+      "name": "Heritage Lodge",
+      "address": "3555 Portage Avenue",
+      "phone": "204-888-7940",
+      "website": "http://wrha.mb.ca/ltc/pch/pch-heritage-lodge.php",
+      "email": "N/A",
+      "lat": "49.883139",
+      "lng": "-97.307588"
+    },
+    {
+      "name": "The Salvation Army Golden West Centennial Lodge",
+      "address": "811 School Road",
+      "phone": "204-888-3311",
+      "website": "http://goldenwestlodge.ca/",
+      "email": "swright@goldenwestlodge.ca",
+      "lat": "49.888578",
+      "lng": "-97.288416"
+    },
+    {
+      "name": "Deer Lodge Centre",
+      "address": "2109 Portage Avenue",
+      "phone": "204-837-1301",
+      "website": "http://www.deerlodge.mb.ca/",
+      "email": "Info@deerlodge.mb.ca",
+      "lat": "49.877554",
+      "lng": "-97.235604"
+    }
+  ],
+  "lastupdate": "2015-Dec-29"
+}
