@@ -1,0 +1,796 @@
+{
+	"featuremetadata":{
+		"featureid":"If source is sdi then feature id equals to control table feature id. If source is open data, then feature id is an text identifier that is use in the url to identified this feature.",
+		"loaderid":"an distinct integer used in asyncrhronous loader. if all features use the same loaderid, then only the last feature get loaded. each loader id is compose of an array with two values. The reason for this is because, inorder to load geometry (polygon, polyline) for opendata, we need to make two loader calls for one feature. One call to get the geometry, another call to get the data.",
+		"loaderidrange":"google 0-500, opendata=501-1000, anything else =1001-2000 nextval=1009, SDI=12030-infinity",
+		"featurename":"name of this feature",
+		"descr":"short description for the feature.",
+		"source":"specified where the source comes from. (google,sdi,opendata,external,impark,transit,twitter) External type means anything hardcode and its loaded from google drive.",
+		"sourcetype":"specifies the input type. for data coming from sdi the types are (wfs, wms). for data coming from opendata, the types are (json, kml, kmz). wfs and json are differenct. json is hardcoded and wfs is dynamic ",
+		"srcgeolocation":"used by opendata. this field store the link to get the geometry information. ",
+		"srcdatalocation":"used by opendata polygons only. Opendata format had changed. now both geometry and attribute data are provided in srcgeolocaiton. This field will be used id the geo container",
+		"expiredata":"its an integer field that specify a time frame for feature to reload.syntx ###_DAYS or ###_MINS applies to any data that loads the whole city without spatial filtering. eg opendata and twitter",
+		"minzoom":"the minimum zoom (or max zoomed in) level which allows the feature to be visible. current max value for this field is 20",
+		"maxzoom":"the maximum zoom (or max zoomed out) level which allows this feature to be visible. current min value forthis field is 10",
+		"displaystyle":"string stores the display style for polygon and polyline. default values for polygon jsonobject {strokeColor:\"#0000FF\",fillColor:\"#140000FF\",strokeWidth:\"10\"}",
+		"geotype":"specifies the type of gemetry (tile, png, point, polygon, polyline)",
+		"featurescale":"a paramter used to target sdi wfs. this values is used to fake an feature scale. sdi wfs will only return data based on a scale range. control table d scale from and to. And depending on the scale, coordinate are either encoded or un-encoded. check word doc for more info.",
+		"action":"used to defined custom action for a featuer. so far have not been used. default value= 'default'",
+		"sourcecol":"All features must have source col, except basemap. db tables are created by this value.  For polygon and polyline, the first col must be the id used to join the geometry and the data.",
+		"displaycol":"cols to be displayed in the info window. alias can be implemented by  colname:aliasname. Any aliasname that equals to (Website, Email) or containing (PhoneNum) will trigger intent to open the browser or email client.",
+		"markericon":"marker for point geometery. if text contain local:// then it indicate local drawable else triggers an internet fetch",
+		"geozindex":"integer used by polygon and polyline to set the order of the layers. low number equals bottom and high number equals top.",
+"hashtoken":"4fo+C+lb?s@ARZQz^a?2i3U*TY2.<:b>hd9K7krk9ezv.1(z2g[6u%C1vb&:m)F11HhY<nrHZE8w(Otep7])bc6eF}hdV>vO"
+	},
+	"featuregroups":[
+		{
+			"groupname":"BaseMap",
+			"features":[
+				{
+					"featureid":1,
+					"loaderid":[
+						0,
+						0
+					],
+					"featurename":"Google Terrain maps",
+					"descr":"Terrain maps.",
+					"source":"google",
+					"sourcetype":"wms",
+					"srcgeolocation":"internal google command",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"tile",
+					"featurescale":"",
+					"markericon":"local://terrain"
+				},
+				{
+					"featureid":2,
+					"loaderid":[
+						1,
+						0
+					],
+					"featurename":"Google Satellite maps",
+					"descr":"Satellite maps with no labels.",
+					"source":"google",
+					"sourcetype":"wms",
+					"srcgeolocation":"internal google command",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"tile",
+					"featurescale":"",
+					"markericon":"local://satellite"
+				},
+				{
+					"featureid":3,
+					"loaderid":[
+						2,
+						0
+					],
+					"featurename":"Google Hybrid maps",
+					"descr":"Satellite maps with a transparent layer of major streets. ",
+					"source":"google",
+					"sourcetype":"wms",
+					"srcgeolocation":"internal google command",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"tile",
+					"featurescale":"",
+					"markericon":"local://hybrid"
+				}
+			]
+			
+		},
+		{
+			"groupname":"Boundary",
+			"features":[
+				{
+					"featureid":"jx93-sett",
+					"loaderid":[
+						509,
+						510
+					],
+					"featurename":"City Limit",
+					"descr":"City Limit Boundary. Viewable at all zoom levels",
+					"source":"opendata",
+					"sourcetype":"kml",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/ynbg-fis5/rows.json?accessType=DOWNLOAD",
+					"srcdatalocation":"the_geom,coordinates",
+					"expiredate":"31_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"displaystyle":{
+						"strokeColor":"#FF0000",
+						"fillColor":"#14FF0000",
+						"strokeWidth":"10"
+					},
+					"geotype":"polygon",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":":id,name",
+					"displaycol":"name:Name",
+					"geozindex":"1",
+					"markericon":"local://polygon"
+				},
+				{
+					"featureid":"ede3-teb8",
+					"loaderid":[
+						511,
+						512
+					],
+					"featurename":"Electoral Ward",
+					"descr":"Electoral Ward boundary. Viewable at all zoom levels",
+					"source":"opendata",
+					"sourcetype":"kml",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/7mch-3g8z/rows.json?accessType=DOWNLOAD",
+					"srcdatalocation":"the_geom,coordinates",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":":id,name,councillor,phone,asst,asstphone,clerk,clerkphone,website",
+					"displaycol":"name:Name,councillor:Councillor,phone:PhoneNum,asst:Assistant,asstphone:Assistant PhoneNum,clerk:Clerk,clerkphone:Clerk PhoneNum,website:Website",
+					"geozindex":"2",
+					"markericon":"local://polygon"
+				},
+				{
+					"featureid":"jhqm-mmeu",
+					"loaderid":[
+						513,
+						514
+					],
+					"featurename":"School Division",
+					"descr":"School Division Boundary. Viewable at all zoom levels",
+					"source":"opendata",
+					"sourcetype":"kml",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/42nf-uy33/rows.json?accessType=DOWNLOAD",
+					"srcdatalocation":"the_geom,coordinates",
+					"expiredate":"32_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":":id,division,name,website",
+					"displaycol":"division:Division,name:Name,website:Website",
+					"geozindex":"3",
+					"markericon":"local://polygon"
+				},
+				{
+					"featureid":"fen6-iygi",
+					"loaderid":[
+						515,
+						516
+					],
+					"featurename":"Neighbourhood",
+					"descr":"Neighbourhood Boundary. Viewable at all zoom levels (Slow)",
+					"source":"opendata",
+					"sourcetype":"kml",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/6vhd-xc8v/rows.json?accessType=DOWNLOAD",
+					"srcdatalocation":"the_geom,coordinates",
+					"expiredate":"33_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":":id,name",
+					"displaycol":"name:Name",
+					"geozindex":"4",
+					"markericon":"local://polygon"
+				}
+				
+			]
+			
+		},
+		{"groupname":"Health",
+			"features":[
+				{
+					"featureid":wpgwalkin,
+					"loaderid":[
+						4,
+						0
+					],
+					"featurename":"Clinic",
+					"descr":"Clinic",
+					"source":"google",
+					"sourcetype":"wfs",
+					"srcgeolocation":"google",
+					"expiredate":"1_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"name,vicinity,url",
+					"displaycol":"name:Name,vicinity:Vicinity,url:Google URL",
+					"markericon":"local://walkingclinic"
+				},
+				{
+					"featureid":"wpghospitals",
+					"loaderid":[
+						1004,
+						0
+					],
+					"featurename":"Hospitals",
+					"descr":"Hospital location",
+					"source":"external",
+					"sourcetype":"wfs",
+					"srcgeolocation":"https://googledrive.com/host/0B9Gz13_c6GdMakRDSVVfc1pudGc/features/wpghospital.json",
+					"expiredate":"60_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"name,address,phone,website,email,em_wait_time",
+					"displaycol":"name:Name,address:Address,phone:Phone,website:Website,email:Email,em_wait_time:Wait Time URL",
+					"markericon":"local://hospital"
+				},
+				{
+					"featureid":"wpghealthcentre",
+					"loaderid":[
+						1005,
+						0
+					],
+					"featurename":"Health Centre",
+					"descr":"Health centre location",
+					"source":"external",
+					"sourcetype":"wfs",
+					"srcgeolocation":"https://googledrive.com/host/0B9Gz13_c6GdMakRDSVVfc1pudGc/features/wpghealthcentre.json",
+					"expiredate":"60_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"name,address,phone,website,email",
+					"displaycol":"name:Name,address:Address,phone:PhoneNum,website:Website,email:Email",
+					"markericon":"local://healthcentre"
+				},
+				{
+					"featureid":"wpgcarehome",
+					"loaderid":[
+						1006,
+						0
+					],
+					"featurename":"Personal care home",
+					"descr":"Personal care location",
+					"source":"external",
+					"sourcetype":"wfs",
+					"srcgeolocation":"https://googledrive.com/host/0B9Gz13_c6GdMakRDSVVfc1pudGc/features/wpgcarehome.json",
+					"expiredate":"60_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"name,address,phone,website,email",
+					"displaycol":"name:Name,address:Address,phone:PhoneNum,website:Website,email:Email",
+					"markericon":"local://personalcarehome"
+				}
+				]
+			},
+		{
+			"groupname":"Recreation",
+			"features":[
+				{
+					"featureid":"t3cz-kh3n",
+					"loaderid":[
+						517,
+						0
+					],
+					"featurename":"Arena",
+					"descr":"Location of arenas.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/t3cz-kh3n/rows.json?accessType=DOWNLOAD",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"name,address,ice_surface_count,website,operated_by,is_open,complexid,location_1",
+					"displaycol":"name:Name,address:Address,ice_surface_count:Surface count,website:Website",
+					"markericon":"local://arena"
+				},
+				{
+					"featureid":"m6ra-xm9i",
+					"loaderid":[
+						518,
+						0
+					],
+					"featurename":"Community center",
+					"descr":"Location of community centers.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/m6ra-xm9i/rows.json?accessType=DOWNLOAD",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"name,address,website,email,location_1",
+					"displaycol":"name:Name,address:Address,website:Website,email:Email",
+					"markericon":"local://communitycenter"
+				},
+				{
+					"featureid":"bfx6-4qpd",
+					"loaderid":[
+						519,
+						0
+					],
+					"featurename":"Fitness leisure center",
+					"descr":"Location of fitness centers.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/6bfx-4qpd/rows.json?accessType=DOWNLOAD",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"sourcecol":"name,address,weight_room,lockers,lockers_info,showers,room_rentals,room_rentals_info,programs,programs_info,facility_info,website,owned_by,operated_by,maintained_by,location_1",
+					"displaycol":"name:Name,address:Address,website:Website",
+					"markericon":"local://fitness"
+				},
+				{
+					"featureid":"itub-a6x4",
+					"loaderid":[
+						520,
+						0
+					],
+					"featurename":"Library",
+					"descr":"Location of libraries.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/itub-a6x4/rows.json?accessType=DOWNLOAD",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"sourcecol":"name,address,wifi,accessibilty,room_rentals,room_rental_info,parking_lot,parkng_stalls,notes,website,location_1",
+					"displaycol":"name:Name,address:Address,wifi:WIFI,accessibility:Accessibilty,room_rentals:Room rentals,room_rental_info:Rental info,parking_lot:Parking lot,parkng_stalls:Stalls,notes:Notes,website:Website",
+					"markericon":"local://library"
+				},
+				{
+					"featureid":"pnd5-29qy",
+					"loaderid":[
+						521,
+						0
+					],
+					"featurename":"Indoor pool",
+					"descr":"Location of indoor swimming pools.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/pnd5-29qy/rows.json?accessType=DOWNLOAD",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"sourcecol":"name,address,entry_height_requirement,pool_entry,average_water_temp,average_air_temp,group_bookings_info,lockers_info,diving_board_info,lap_swim_info,website,location_1",
+					"displaycol":"name:Name,address:Address,entry_height_requirement:Height Req,pool_entry:Pool Entry,average_water_temp:Avg Water TEMP,average_air_temp:Avg Air TEMP,group_bookings_info:Group Booking,lockers_info:Locker Info,diving_board_info:Diving Board,lap_swim_info:Lap Swim Info,website:Website",
+					"markericon":"local://indoorpool"
+				},
+				{
+					"featureid":"m7h5-by7s",
+					"loaderid":[
+						522,
+						0
+					],
+					"featurename":"Outdoor pool",
+					"descr":"Location of outdoor swimming pools.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/m7h5-by7s/rows.json?accessType=DOWNLOAD",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"sourcecol":"name,address,entry_height_requirement,pool_entry,average_water_temp,group_booking_info,diving_board_info,facility_info,website,location_1",
+					"displaycol":"name:Name,address:Address,entry_height_requirement:Height Req,pool_entry:Pool Entry,average_water_temp:Avg Water TEMP,group_booking_info:Group Booking,diving_board_info:Diving Board,facility_info:Facility Info,website:Website",
+					"markericon":"local://outdoorpool"
+				},
+				{
+					"featureid":"ky6k-a232",
+					"loaderid":[
+						523,
+						0
+					],
+					"featurename":"Spraypad",
+					"descr":"Location of spraypads.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/ky6k-a232/rows.json?accessType=DOWNLOAD",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"sourcecol":"name,address,website,location_1",
+					"displaycol":"name:Name,address:Address,website:Website",
+					"markericon":"local://spraypad"
+				},
+				{
+					"featureid":"fe7p-u4s6",
+					"loaderid":[
+						524,
+						0
+					],
+					"featurename":"Wading pool",
+					"descr":"Location of wading pools.",
+					"source":"opendata",
+					"sourcetype":"json",
+					"srcgeolocation":"https://data.winnipeg.ca/api/views/fe7p-u4s6/rows.json?accessType=DOWNLOAD",
+					"expiredate":"30_DAYS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"sourcecol":"name,address,website,location_1",
+					"displaycol":"name:Name,address:Address,website:Website",
+					"markericon":"local://wadingpool"
+				}
+				
+			]
+			
+		},
+		{
+			"groupname":"Transportation",
+			"features":[
+				{
+					"featureid":4,
+					"loaderid":[
+						3,
+						0
+					],
+					"featurename":"Traffic",
+					"descr":"Traffic",
+					"source":"google",
+					"sourcetype":"wfs",
+					"srcgeolocation":"google",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polyline",
+					"featurescale":"",
+					"markericon":"local://traffic"
+				},
+				{
+					"featureid":"transit1",
+					"loaderid":[
+						1003,
+						0
+					],
+					"featurename":"Winnipeg transit",
+					"descr":"Winnipeg transit bus stops",
+					"source":"transit",
+					"sourcetype":"wfs",
+					"srcgeolocation":"transiturl",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"15",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"transitinfo",
+					"markericon":"local://transit"
+				}
+				
+			]
+			
+		},
+		{
+		"groupname":"Social Media",
+			"features":[
+				
+				{
+					"featureid":"instagram",
+					"loaderid":[
+						1007,
+						0
+					],
+					"featurename":"Instagram",
+					"descr":"Load public instagram. Data refresh every 15 mins. location approximate",
+					"source":"instagram",
+					"sourcetype":"json",
+					"expiredate":"15_MINS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"action":"instagraminfo",
+					"markericon":"local://instagram",
+					"sourcecol":"id,image_thumb,created_time,image_normal,link,image_low,user,caption",
+					"displaycol":"*"
+				},
+				{
+					"featureid":"twitter",
+					"loaderid":[
+						1008,
+						0
+					],
+					"featurename":"Twitter",
+					"descr":"Load current public tweets. Data refresh every 15 mins. location approximate",
+					"source":"twitter",
+					"sourcetype":"json",
+					"expiredate":"15_MINS",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"action":"twitterinfo",
+					"markericon":"local://twitter",
+					"sourcecol":"id,text,created_at,screen_name,in_reply_to",
+					"displaycol":"*"
+				}
+				
+			]
+			
+		},
+		{
+			"groupname":"Enter the Matrix",
+			"features":[
+			{
+					"featureid":matrix-1,
+					"loaderid":[
+						-1,
+						0
+					],
+					"featurename":"Lane closures NA",
+					"descr":"Lane closures NA",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polyline",
+					"featurescale":""
+				},
+				{
+					"featureid":777825,
+					"loaderid":[
+						777825,
+						0
+					],
+					"featurename":"City of Winnipeg Street",
+					"descr":"City of Winnipeg Street",
+					"source":"sdi",
+					"sourcetype":"wms",
+					"srcgeolocation":"gettile",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"tile",
+					"featurescale":""
+				},
+				{
+					"featureid":13875,
+					"loaderid":[
+						13875,
+						0
+					],
+					"featurename":"Assessment value SDI WMS",
+					"descr":"Assessment value SDI WMS",
+					"source":"sdi",
+					"sourcetype":"wms",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"png",
+					"featurescale":""
+				},
+				{
+					"featureid":13937,
+					"loaderid":[
+						13937,
+						0
+					],
+					"featurename":"Assessment parcel SDI WFS",
+					"descr":"Assessment parcel SDI WFS",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"17",
+					"geotype":"polygon",
+					"featurescale":"2853",
+					"action":"http://winnipeg.ca/cms/Now/chksecrollnum/ChkSecRollNum.asp?isRealtySearch=true&pglang=EN&",
+					"displaycol":"ASSESSMENT_PIN:RollNumber"
+				},
+				{
+					"featureid":matrix-2,
+					"loaderid":[
+						0,
+						0
+					],
+					"featurename":"Building",
+					"descr":"Building",
+					"sourcetype":"npg",
+					"srcgeolocation":"google"
+				},
+				{
+					"featureid":matrix-5,
+					"loaderid":[
+						0,
+						0
+					],
+					"featurename":"Indoor",
+					"descr":"Indoor",
+					"sourcetype":"png",
+					"srcgeolocation":"winnipeg.ca/gettiles"
+				},
+				{
+					"featureid":12031,
+					"loaderid":[
+						12031,
+						0
+					],
+					"featurename":"City Limit",
+					"descr":"Status=offline source=sdi type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":""
+				},
+				{
+					"featureid":12092,
+					"loaderid":[
+						12092,
+						0
+					],
+					"featurename":"Electoral ward",
+					"descr":"Status=ok source=sdi type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":""
+				},
+				{
+					"featureid":13377,
+					"loaderid":[
+						13377,
+						0
+					],
+					"featurename":"School division",
+					"descr":"Status=ok source=sdi type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"polygon",
+					"featurescale":""
+				},
+				{
+					"featureid":12096,
+					"loaderid":[
+						12096,
+						0
+					],
+					"featurename":"Neighbourhood",
+					"descr":"Status=offline source=sid type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"googledrive",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"",
+					"featurescale":"polygon"
+				},{
+					"featureid":13386,
+					"loaderid":[
+						13386,
+						0
+					],
+					"featurename":"School private",
+					"descr":"Status=ok source=sdi type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"default",
+					"displaycol":"NAME:Name,ADDRESS:Address,POSTAL_CODE:Postal Code,PHONE_NUMBER:PhoneNum,EMAIL_ADDRESS:Email",
+					"markericon":"http://google-maps-icons.googlecode.com/files/university.png"
+				},
+				{
+					"featureid":13387,
+					"loaderid":[
+						13387,
+						0
+					],
+					"featurename":"School public",
+					"descr":"Status=ok source=sdi type=wfs zoom=10-20",
+					"source":"sdi",
+					"sourcetype":"wfs",
+					"srcgeolocation":"cow",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":"",
+					"action":"",
+					"displaycol":"NAME:Name,POSTAL_CODE:Postal code,PHONE_NUMBER:PhoneNum",
+					"markericon":"https://google-maps-icons.googlecode.com/files/school.png"
+				},
+				{
+					"featureid":matrix-3,
+					"loaderid":[
+						1001,
+						0
+					],
+					"featurename":"WPG Parking Athority",
+					"descr":"Parkages operated by WPA. Status=offline",
+					"source":"external",
+					"sourcetype":"wfs",
+					"srcgeolocation":"googledrive",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":""
+				},
+				{
+					"featureid":matrix-4,
+					"loaderid":[
+						1002,
+						0
+					],
+					"featurename":"Impark",
+					"descr":"Parking Lots operated by Impark. Status=offline",
+					"source":"impark",
+					"sourcetype":"wfs",
+					"srcgeolocation":"imparkurl",
+					"expiredate":"-1",
+					"minzoom":"20",
+					"maxzoom":"10",
+					"geotype":"point",
+					"featurescale":""
+				},
+				{
+					"featureid":99,
+					"loaderid":[
+						0,
+						0
+					],
+					"featurename":"facebook",
+					"descr":"facebook",
+					"sourcetype":"na",
+					"srcgeolocation":"na"
+				}
+				
+			]
+			
+		}
+		
+	]
+}
